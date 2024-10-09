@@ -8,7 +8,7 @@
         <h1>Validation Exercise</h1>
         <form action="#" th:action="@{/phone-number}" th:object="${phoneNumber}" method="post">
             <label for="phone">Phone number:</label>
-            <input type="text" id="phone" th:field="*{phone}" />
+            <input type="text" id="phone" th:field="*{phone}" required minlength="10" maxlength="11"/>
             <input type="submit" value="Submit" />
         </form>
     </body>
